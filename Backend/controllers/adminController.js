@@ -11,6 +11,24 @@ exports.banUser = async (req, res) => {
   }
 };
 
+exports.unbanUser = async (req, res) => {
+  try {
+    const user = await User.findByIdAndUpdate(req.params.userId, { banned: false }, { new: true });
+    res.status(200).json(user);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+exports.getBannedUsers = async (req, res) => {
+  try {
+    const users = await User.find({ banned: true }).select('-password');
+    res.status(200).json(users);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
 exports.getSwapStats = async (req, res) => {
   try {
     const total = await Swap.countDocuments();
