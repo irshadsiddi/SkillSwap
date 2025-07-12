@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# dotenv environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# MongoDB database files (for local DB, if any)
+*.local
+
+# Optional: coverage reports
+coverage/
+
+# Optional: build directory if you compile or bundle
+dist/
+build/
+
+# Debugging and test outputs
+*.tgz
+*.tsbuildinfo
