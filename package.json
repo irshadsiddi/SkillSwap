@@ -1,0 +1,31 @@
+{
+  "name": "skillswap",
+  "version": "1.0.0",
+  "description": "Develop a **Skill Swap Platform** — a mini application that enables users to list their skills and request others in return. This platform aims to promote peer-to-peer learning and collaboration by allowing individuals to offer their expertise in exchange for acquiring new skills from others.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irshadsiddi/SkillSwap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/irshadsiddi/SkillSwap/issues"
+  },
+  "homepage": "https://github.com/irshadsiddi/SkillSwap#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.3",
+    "multer": "^2.0.1"
+  }
+}
