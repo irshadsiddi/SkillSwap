@@ -1,0 +1,96 @@
+import { User, SwapRequest, Feedback } from '../types';
+
+export const mockUsers: User[] = [
+  {
+    id: '1',
+    name: 'Sarah Johnson',
+    email: 'sarah@example.com',
+    location: 'San Francisco, CA',
+    profilePhoto: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100',
+    skillsOffered: ['React', 'TypeScript', 'UI/UX Design'],
+    skillsWanted: ['Python', 'Data Analysis', 'Photography'],
+    availability: ['Weekends', 'Evenings'],
+    isPublic: true,
+    rating: 4.8,
+    reviewCount: 12,
+    joinDate: '2024-01-15',
+  },
+  {
+    id: '2',
+    name: 'Mike Chen',
+    email: 'mike@example.com',
+    location: 'New York, NY',
+    profilePhoto: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100',
+    skillsOffered: ['Python', 'Machine Learning', 'Data Science'],
+    skillsWanted: ['React', 'Frontend Development', 'Design'],
+    availability: ['Weekdays', 'Flexible'],
+    isPublic: true,
+    rating: 4.9,
+    reviewCount: 18,
+    joinDate: '2024-02-01',
+  },
+  {
+    id: '3',
+    name: 'Emma Davis',
+    email: 'emma@example.com',
+    location: 'Austin, TX',
+    profilePhoto: 'https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=100',
+    skillsOffered: ['Photography', 'Adobe Photoshop', 'Content Creation'],
+    skillsWanted: ['Video Editing', 'Marketing', 'Social Media'],
+    availability: ['Weekends'],
+    isPublic: true,
+    rating: 4.7,
+    reviewCount: 8,
+    joinDate: '2024-03-10',
+  },
+  {
+    id: 'admin',
+    name: 'Admin User',
+    email: 'admin@skillswap.com',
+    skillsOffered: ['Platform Management'],
+    skillsWanted: [],
+    availability: ['Always'],
+    isPublic: false,
+    rating: 5.0,
+    reviewCount: 0,
+    joinDate: '2024-01-01',
+    isAdmin: true,
+  }
+];
+
+export const mockSwapRequests: SwapRequest[] = [
+  {
+    id: '1',
+    fromUserId: '2',
+    toUserId: '1',
+    skillOffered: 'Python',
+    skillWanted: 'React',
+    message: 'Hi Sarah! I\'d love to teach you Python in exchange for learning React. I have 5+ years of Python experience.',
+    status: 'pending',
+    createdAt: '2024-12-10T10:00:00Z',
+    updatedAt: '2024-12-10T10:00:00Z',
+  },
+  {
+    id: '2',
+    fromUserId: '1',
+    toUserId: '3',
+    skillOffered: 'UI/UX Design',
+    skillWanted: 'Photography',
+    message: 'Hi Emma! I can help you with UI/UX design principles in exchange for photography lessons.',
+    status: 'accepted',
+    createdAt: '2024-12-08T14:30:00Z',
+    updatedAt: '2024-12-09T09:15:00Z',
+  },
+];
+
+export const mockFeedback: Feedback[] = [
+  {
+    id: '1',
+    swapRequestId: '2',
+    fromUserId: '1',
+    toUserId: '3',
+    rating: 5,
+    comment: 'Emma was an amazing photography teacher! Very patient and knowledgeable.',
+    createdAt: '2024-12-11T16:00:00Z',
+  },
+];
